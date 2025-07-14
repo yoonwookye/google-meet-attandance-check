@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📋 구글 밋 출석체크</h1>
+      </div>
+
+      <div class="section">
+        <h2>팀원 목록 관리</h2>
+        <textarea
+          id="teamMembers"
+          placeholder="팀원 이름을 한 줄씩 입력하세요&#10;예:&#10;홍길동&#10;김철수&#10;이영희"
+        ></textarea>
+        <button id="saveTeamMembers">팀원 목록 저장</button>
+      </div>
+
+      <div class="section">
+        <h2>출석체크</h2>
+        <button id="checkAttendance" class="primary-button">
+          출석체크 실행
+        </button>
+        <div id="status" class="status hidden"></div>
+      </div>
+
+      <div class="section">
+        <h2>결과</h2>
+        <div id="results" class="results hidden">
+          <div class="result-item">
+            <h3>📊 요약</h3>
+            <div id="summary"></div>
+          </div>
+
+          <div class="result-item">
+            <h3>✅ 참석자</h3>
+            <div id="attendees"></div>
+          </div>
+
+          <div class="result-item">
+            <h3>❌ 미참석자</h3>
+            <div id="absentees"></div>
+          </div>
+
+          <div class="result-item">
+            <h3>👥 전체 구글 밋 참석자</h3>
+            <div id="allAttendees"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>사용 방법</h2>
+        <ol>
+          <li>팀원 목록을 입력하고 저장하세요</li>
+          <li>구글 밋 페이지에서 '사람' 또는 'People' 탭을 열어두세요</li>
+          <li>'출석체크 실행' 버튼을 클릭하세요</li>
+          <li>결과를 확인하세요</li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="dist/popup.js"></script>
+  </body>
+</html>

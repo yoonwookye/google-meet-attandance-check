@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "구글 밋 출석체크",
+  "version": "1.0",
+  "description": "구글 밋에서 팀원들의 출석을 체크하는 익스텐션",
+
+  "permissions": ["activeTab", "storage"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "출석체크"
+  }
+}

@@ -1,0 +1,271 @@
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  overflow: hidden; /* 추가: 외부 스크롤바 제거 */
+}
+
+.container {
+  width: 600px; /* 기존 550px → 600px */
+  min-width: 500px;
+  max-height: 760px; /* 기존 700px → 760px */
+  overflow-y: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.section {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* 텍스트 영역 */
+#teamMembers {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+#teamMembers:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+#teamMembers::placeholder {
+  color: #999;
+}
+
+/* 버튼 스타일 */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+#saveTeamMembers {
+  background-color: #28a745;
+  color: white;
+  margin-top: 10px;
+}
+
+#saveTeamMembers:hover {
+  background-color: #218838;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 14px;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.primary-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+}
+
+/* 상태 메시지 */
+.status {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.status.info {
+  background-color: #cce7ff;
+  color: #004085;
+  border: 1px solid #b8daff;
+}
+
+/* 결과 영역 */
+.results {
+  margin-top: 15px;
+}
+
+.result-item {
+  margin-bottom: 20px;
+}
+
+.result-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 요약 정보 */
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.summary-item:last-child {
+  margin-bottom: 0;
+}
+
+.summary-item .label {
+  font-weight: 500;
+  color: #555;
+}
+
+.summary-item .value {
+  font-weight: 600;
+  color: #333;
+}
+
+/* 이름 태그 */
+.name-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 3px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #e9ecef;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.name-tag.present {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.name-tag.absent {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.no-data {
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  display: block;
+  padding: 20px;
+}
+
+/* 사용 방법 */
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* 숨김 클래스 */
+.hidden {
+  display: none !important;
+}
+
+/* 스크롤바 스타일 */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+}

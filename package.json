@@ -1,0 +1,15 @@
+{
+  "name": "google-meet-attendance-check",
+  "version": "1.0.0",
+  "description": "구글 밋 출석체크 크롬 익스텐션",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/chrome": "^0.0.246"
+  },
+  "private": true
+}
